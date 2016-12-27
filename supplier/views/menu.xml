@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <menuitem name="供应管理" id="menu_supplier_management" sequence="1"/>
+
+        <menuitem name="供应商管理" id="menu_two_supplier_information" parent="menu_supplier_management" sequence="1"/>
+        <menuitem name="供应商" id="menu_three_supplier_info" parent="menu_two_supplier_information" action="action_base_supplier_info" sequence="1"/>
+        <menuitem name="联系人" id="menu_three_supplier_line" parent="menu_two_supplier_information" action="action_base_supplier_line" sequence="2"/>
+
+    </data>
+</openerp>

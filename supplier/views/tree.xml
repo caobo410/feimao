@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!--品牌列表-->
+        <record id="view_tree_supplier_info" model="ir.ui.view">
+            <field name="name">供应商</field>
+            <field name="model">supplier.info</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="view">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="zj_code"/>
+                    <field name="type"/>
+                    <field name="company_type"/>
+                    <field name="payment"/>
+                    <field name="legal_person"/>
+                    <field name="tel"/>
+                    <field name="phone"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--商品分类-->
+        <record id="view_tree_supplier_line" model="ir.ui.view">
+            <field name="name">联系人</field>
+            <field name="model">supplier.line</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="view">
+                    <field name="name"/>
+                    <field name="supplier_id"/>
+                    <field name="tel"/>
+                    <field name="phone_one"/>
+                    <field name="phone_two"/>
+                    <field name="address"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--商品分类-->
+        <record id="view_tree_goods_info" model="ir.ui.view">
+            <field name="name">商品分类</field>
+            <field name="model">goods.info</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="view">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="zj_code"/>
+                    <field name="bar_code"/>
+                    <field name="one_classification_id"/>
+                    <field name="two_classification_id"/>
+                    <field name="brand_id"/>
+                    <field name="unit_id"/>
+                    <field name="fz_unit_id"/>
+                    <field name="jy_price"/>
+                    <field name="jyls_price"/>
+                </tree>
+            </field>
+        </record>
+
+        <!--商品分类-->
+        <record id="view_tree_goods_info" model="ir.ui.view">
+            <field name="name">商品分类</field>
+            <field name="model">goods.info</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="view">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="zj_code"/>
+                    <field name="bar_code"/>
+                    <field name="one_classification_id"/>
+                    <field name="two_classification_id"/>
+                    <field name="brand_id"/>
+                    <field name="unit_id"/>
+                    <field name="fz_unit_id"/>
+                    <field name="jy_price"/>
+                    <field name="jyls_price"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>

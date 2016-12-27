@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--品牌-->
+        <record id="action_base_brand_info" model="ir.actions.act_window">
+          <field name="name">品牌</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">brand.info</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+          <!--<field name="context">{"search_default_no_check_in":1}</field>-->
+          <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+              品牌管理
+            </p>
+          </field>
+        </record>
+
+      <!--商品分类-->
+        <record id="action_base_classification_info" model="ir.actions.act_window">
+          <field name="name">商品分类</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">classification.info</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+          <!--<field name="context">{"search_default_no_check_in":1}</field>-->
+          <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+              商品分类
+            </p>
+          </field>
+        </record>
+
+      <!--单位列表-->
+        <record id="action_base_unit_info" model="ir.actions.act_window">
+          <field name="name">单位</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">unit.info</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+          <!--<field name="context">{"search_default_no_check_in":1}</field>-->
+          <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+              单位列表
+            </p>
+          </field>
+        </record>
+      <!--商品-->
+        <record id="action_base_goods_info" model="ir.actions.act_window">
+          <field name="name">商品</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">goods.info</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+          <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+              商品管理
+            </p>
+          </field>
+        </record>
+    </data>
+</openerp>

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- 品牌名称 -->
+        <record id="view_form_supplier_info" model="ir.ui.view">
+            <field name="name">品牌名称</field>
+            <field name="model">supplier.info</field>
+            <field name="arch" type="xml">
+                <form string="窗体名称" version="7.0">
+                    <sheet>
+                        <h1>
+                            编号<field name="code" class="oe_inline"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="zj_code"/>
+                                <field name="address"/>
+                            </group>
+                            <group>
+                                <field name="type"/>
+                                <field name="post_code"/>
+                                <field name="company_type"/>
+                            </group>
+                        </group>
+                        <group>
+                            <group>
+                                <field name="legal_person"/>
+                                <field name="tel"/>
+                                <field name="phone"/>
+                            </group>
+                            <group>
+                                <field name="payment"/>
+                                <field name="bank"/>
+                                <field name="bank_account"/>
+                            </group>
+                        </group>
+                        <notebook colspan="4">
+                            <page string="联系人">
+                                <field name="supplier_id">
+                                    <form string="departments" version="7.0">
+                                        <group>
+                                            <group>
+                                                <field name="name"/>
+                                                <field name="tel"/>
+                                                <field name="address"/>
+                                            </group>
+                                            <group>
+                                                <field name="phone_one"/>
+                                                <field name="phone_two"/>
+                                            </group>
+                                        </group>
+                                    </form>
+                                    <tree string="列表" editable="bottom">
+                                        <field name="name"/>
+                                        <field name="tel"/>
+                                        <field name="phone_one"/>
+                                        <field name="phone_two"/>
+                                        <field name="address"/>
+                                    </tree>
+                                </field>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record id="view_form_supplier_line" model="ir.ui.view">
+            <field name="name">联系人</field>
+            <field name="model">supplier.line</field>
+            <field name="arch" type="xml">
+                <form string="窗体名称" version="7.0">
+                    <sheet>
+                        <h1>
+                            姓名<field name="name"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="tel"/>
+                                <field name="address"/>
+                            </group>
+                            <group>
+                                <field name="phone_one"/>
+                                <field name="phone_two"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

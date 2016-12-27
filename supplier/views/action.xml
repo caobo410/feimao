@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!--供应商管理-->
+        <record id="action_base_supplier_info" model="ir.actions.act_window">
+          <field name="name">供应商</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">supplier.info</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+          <!--<field name="context">{"search_default_no_check_in":1}</field>-->
+          <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+              联系人
+            </p>
+          </field>
+        </record>
+
+        <!--联系人-->
+        <record id="action_base_supplier_line" model="ir.actions.act_window">
+          <field name="name">联系人</field>
+          <field name="type">ir.actions.act_window</field>
+          <field name="res_model">supplier.line</field>
+          <field name="view_type">form</field>
+          <field name="view_mode">tree,form</field>
+          <!--<field name="context">{"search_default_no_check_in":1}</field>-->
+          <field name="help" type="html">
+            <p class="oe_view_nocontent_create">
+              联系人管理
+            </p>
+          </field>
+        </record>
+    </data>
+</openerp>

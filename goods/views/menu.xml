@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <menuitem name="基础信息" id="menu_base_management" sequence="1"/>
+
+        <menuitem name="基础数据" id="menu_two_base_information" parent="menu_base_management" sequence="1"/>
+        <menuitem name="分类" id="menu_base_classification_info" parent="menu_two_base_information" action="action_base_classification_info" sequence="1"/>
+        <menuitem name="单位" id="menu_base_unit_info" parent="menu_two_base_information" action="action_base_unit_info" sequence="2"/>
+        <menuitem name="商品管理" id="menu_two_base_goods_information" parent="menu_base_management" sequence="2"/>
+        <menuitem name="品牌" id="menu_base_brand_info" parent="menu_two_base_goods_information" action="action_base_brand_info" sequence="1"/>
+        <menuitem name="商品名称" id="menu_base_goods_info" parent="menu_two_base_goods_information" action="action_base_goods_info" sequence="2"/>
+
+    </data>
+</openerp>

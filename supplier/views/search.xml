@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!--供应商-->
+        <record id="view_search_base_supplier_info" model="ir.ui.view">
+            <field name="name">供应商查询</field>
+            <field name="model">supplier.info</field>
+            <field name="arch" type="xml">
+                <search string="search">
+                    <field name="code" string="编号" filter_domain="[('code','ilike',self)]"/>
+                    <field name="name" string="名称" filter_domain="[('name','ilike',self)]"/>
+                    <field name="zj_code" string="助记码" filter_domain="[('zj_code','ilike',self)]"/>
+                    <field name="address" string="地址" filter_domain="[('address','ilike',self)]"/>
+                    <field name="legal_person" string="地址" filter_domain="[('legal_person','ilike',self)]"/>
+                    <field name="tel" string="地址" filter_domain="[('tel','ilike',self)]"/>
+                    <field name="phone" string="地址" filter_domain="[('phone','ilike',self)]"/>
+                    <group expand="0" string="Group">
+                        <filter string="配送类型" domain="[]" context="{'group_by':'type'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+        <!--联系人-->
+        <record id="view_search_base_supplier_line_info" model="ir.ui.view">
+            <field name="name">联系人查询</field>
+            <field name="model">supplier.line</field>
+            <field name="arch" type="xml">
+                <search string="search">
+                    <field name="name" string="姓名" filter_domain="[('name','ilike',self)]"/>
+                    <field name="tel" string="电话" filter_domain="[('tel','ilike',self)]"/>
+                    <field name="phone_one" string="手机1" filter_domain="[('phone_one','ilike',self)]"/>
+                    <field name="phone_two" string="手机2" filter_domain="[('phone_two','ilike',self)]"/>
+                    <field name="address" string="地址" filter_domain="[('address','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</openerp>

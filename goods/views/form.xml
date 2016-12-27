@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+        <!-- 品牌名称 -->
+        <record id="view_form_base_brand_info" model="ir.ui.view">
+            <field name="name">品牌名称</field>
+            <field name="model">brand.info</field>
+            <field name="arch" type="xml">
+                <form string="窗体名称" version="7.0">
+                    <sheet>
+                        <h1>
+                            编号<field name="code" class="oe_inline"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="messages"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--商品分类-->
+        <record id="view_form_base_classification_info" model="ir.ui.view">
+            <field name="name">商品分类</field>
+            <field name="model">classification.info</field>
+            <field name="arch" type="xml">
+                <form string="窗体名称" version="7.0">
+                    <sheet>
+                        <h1>
+                            编号<field name="code" class="oe_inline"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="messages"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--商品单位-->
+        <record id="view_form_base_unit_info" model="ir.ui.view">
+            <field name="name">单位</field>
+            <field name="model">unit.info</field>
+            <field name="arch" type="xml">
+                <form string="窗体名称" version="7.0">
+                    <sheet>
+                        <h1>
+                            编号<field name="code" class="oe_inline"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                            </group>
+                            <group>
+                                <field name="messages"/>
+                            </group>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <!--商品名称-->
+        <record id="view_form_base_goods_info" model="ir.ui.view">
+            <field name="name">商品名称</field>
+            <field name="model">goods.info</field>
+            <field name="arch" type="xml">
+                <form string="窗体名称" version="7.0">
+                    <sheet>
+                        <h1>
+                            编号<field name="code" class="oe_inline"/>
+                        </h1>
+                        <group>
+                            <group>
+                                <field name="name"/>
+                                <field name="zj_code"/>
+                                <field name="bar_code"/>
+                                <field name="one_classification_id"/>
+                                <field name="two_classification_id"/>
+                            </group>
+                            <group>
+                                <div>
+                                    <field name="image" widget='image' class="oe_right oe_avatar"
+                                           options='{"preview_image": "image", "size": [300, 300]}'/>
+                                </div>
+                                <br/>
+                                <div >
+                                    T此字段保存产品的图片，仅限于 300x300px
+                                </div>
+                            </group>
+                        </group>
+                        <notebook colspan="4">
+                            <page string="页卡">
+                                <group>
+                                    <group>
+                                        <field name="brand_id"/>
+                                        <field name="unit_id"/>
+                                        <field name="fz_unit_id"/>
+                                        <field name="discount"/>
+                                    </group>
+                                    <group>
+                                        <field name="jy_price"/>
+                                        <field name="jyls_price"/>
+                                        <field name="messages"/>
+                                    </group>
+                                </group>
+                            </page>
+                        </notebook>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+    </data>
+</openerp>

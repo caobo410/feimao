@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!--原材料批次-->
+        <record id="view_search_base_brand_info" model="ir.ui.view">
+            <field name="name">品牌查询</field>
+            <field name="model">brand.info</field>
+            <field name="arch" type="xml">
+                <search string="search">
+                    <field name="code" string="编号" filter_domain="[('code','ilike',self)]"/>
+                    <field name="name" string="名称" filter_domain="[('name','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <!--原材料批次-->
+        <record id="view_search_base_classification_info" model="ir.ui.view">
+            <field name="name">商品分类</field>
+            <field name="model">classification.info</field>
+            <field name="arch" type="xml">
+                <search string="search">
+                    <field name="code" string="编号" filter_domain="[('code','ilike',self)]"/>
+                    <field name="name" string="名称" filter_domain="[('name','ilike',self)]"/>
+                    <!--<field name="commodity_batch_id"/>-->
+                </search>
+            </field>
+        </record>
+
+        <!--原材料批次-->
+        <record id="view_search_base_goods_info" model="ir.ui.view">
+            <field name="name">商品分类</field>
+            <field name="model">goods.info</field>
+            <field name="arch" type="xml">
+                <search string="search">
+                    <field name="code" string="编号" filter_domain="[('code','ilike',self)]"/>
+                    <field name="name" string="名称" filter_domain="[('name','ilike',self)]"/>
+                    <field name="zj_code" string="助记码" filter_domain="[('zj_code','ilike',self)]"/>
+                    <field name="bar_code" string="条形码" filter_domain="[('bar_code','ilike',self)]"/>
+                    <field name="one_classification_id" string="一级分类"/>
+                    <field name="two_classification_id" string="二级分类"/>
+                    <field name="brand_id" string="品牌"/>
+                    <group expand="0" string="Group">
+                        <filter string="一级分类" domain="[]" context="{'group_by':'one_classification_id'}"/>
+                        <filter string="二级分类" domain="[]" context="{'group_by':'two_classification_id'}"/>
+                        <filter string="品牌" domain="[]" context="{'group_by':'brand_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+    </data>
+</openerp>
