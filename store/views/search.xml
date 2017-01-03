@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!--供应商-->
+        <record id="view_search_base_store_info" model="ir.ui.view">
+            <field name="name">供应商查询</field>
+            <field name="model">fm.store</field>
+            <field name="arch" type="xml">
+                <search string="search">
+                    <field name="code" string="门店编号" filter_domain="[('code','ilike',self)]"/>
+                    <field name="name" string="门店名称" filter_domain="[('name','ilike',self)]"/>
+                    <field name="persons_responsible" string="负责人" filter_domain="[('persons_responsible','ilike',self)]"/>
+                    <field name="tel" string="电话" filter_domain="[('tel','ilike',self)]"/>
+                    <field name="operator" string="登录账号" filter_domain="[('operator','ilike',self)]"/>
+                    <field name="open_date" string="开业日期" filter_domain="[('open_date','ilike',self)]"/>
+                    <field name="line_id" string="所属代理" filter_domain="[('line_id','ilike',self)]"/>
+                    <group expand="0" string="Group">
+                        <filter string="所属代理" domain="[]" context="{'group_by':'line_id'}"/>
+                    </group>
+                </search>
+            </field>
+        </record>
+
+
+    </data>
+</openerp>

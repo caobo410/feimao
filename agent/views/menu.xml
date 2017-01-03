@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <menuitem name="代理商管理" id="menu_agent_management" sequence="3"/>
+
+        <menuitem name="代理商管理" id="menu_two_agent_information" parent="menu_agent_management" sequence="1"/>
+        <menuitem name="代理商" id="menu_three_agent_info" parent="menu_two_agent_information" action="action_base_fm_agent" sequence="1"/>
+        <menuitem name="直属门店" id="menu_three_agent_line" parent="menu_two_agent_information" action="action_base_agent_line" sequence="2"/>
+
+    </data>
+</openerp>

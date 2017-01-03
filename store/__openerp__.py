@@ -10,16 +10,20 @@
 # 日期：2015-12-18
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 {
-    'name': 'caobo odoo8.0 ',
+    'name': 'feimao store',
     'summary': '描述',
     'version': '1.0',
     'category': 'Tools',
     'sequence': 0,
     'author': 'caobo',
     'website': 'http://www.golerp.com',
-    'depends': ['base',],
+    'depends': ['base', ],
     'data': [
-
+        'views/form.xml',
+        'views/tree.xml',
+        'views/search.xml',
+        'views/action.xml',
+        'views/menu.xml',
         #'security/ir.model.access.csv',
     ],
     'installable': True,

@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!--门店列表-->
+        <record id="view_tree_fm_store_info" model="ir.ui.view">
+            <field name="name">门店列表</field>
+            <field name="model">fm.store</field>
+            <field name="priority">1</field>
+            <field name="arch" type="xml">
+                <tree string="view">
+                    <field name="code"/>
+                    <field name="name"/>
+                    <field name="persons_responsible"/>
+                    <field name="tel"/>
+                    <field name="operator"/>
+                    <field name="open_date"/>
+                    <field name="line_id"/>
+                </tree>
+            </field>
+        </record>
+
+    </data>
+</openerp>

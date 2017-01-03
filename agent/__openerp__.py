@@ -10,7 +10,7 @@
 # 日期：2015-12-18
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 {
-    'name': 'caobo odoo8.0 ',
+    'name': 'feimao agent',
     'summary': '描述',
     'version': '1.0',
     'category': 'Tools',
@@ -19,7 +19,11 @@
     'website': 'http://www.golerp.com',
     'depends': ['base',],
     'data': [
-
+        'views/form.xml',
+        'views/tree.xml',
+        'views/search.xml',
+        'views/action.xml',
+        'views/menu.xml',
         #'security/ir.model.access.csv',
     ],
     'installable': True,

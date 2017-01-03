@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <menuitem name="门店管理" id="menu_store_management" sequence="4"/>
+
+        <menuitem name="门店管理" id="menu_two_store_information" parent="menu_store_management" sequence="1"/>
+        <menuitem name="门店" id="menu_three_store_info" parent="menu_two_store_information" action="action_base_fm_store" sequence="1"/>
+    </data>
+</openerp>

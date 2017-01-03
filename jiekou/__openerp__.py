@@ -10,7 +10,7 @@
 # 日期：2015-12-18
 # &&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&&
 {
-    'name': 'Cat Purchase',
+    'name': 'feim jiekou',
     'summary': '描述',
     'version': '1.0',
     'category': 'Tools',
@@ -19,8 +19,7 @@
     'website': 'http://www.golerp.com',
     'depends': ['base',],
     'data': [
-
-        #'security/ir.model.access.csv',
+        'views/views.xml',
     ],
     'installable': True,
     'application': True,

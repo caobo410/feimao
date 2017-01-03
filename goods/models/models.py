@@ -25,6 +25,13 @@ class brand_info(models.Model):
     user_id = fields.Many2one('res.users', string='操作人')
     date_confirm = fields.Date(string='日期', size=64, required=True, help='单据日期')
 
+    @api.multi
+    def name_get(self):
+        res = []
+        for brand in self:
+            res.append((brand.id, brand.code and (brand.code + '_' + brand.name) or brand.name))
+        return res
+
     _defaults = {
         'date_confirm': date_ref,
         'user_id': lambda cr, uid, id, c={}: id,
@@ -39,6 +46,12 @@ class classification_info(models.Model):
     user_id = fields.Many2one('res.users', string='操作人')
     date_confirm = fields.Date(string='日期', size=64, required=True, help='单据日期')
 
+    @api.multi
+    def name_get(self):
+        res = []
+        for classification in self:
+            res.append((classification.id, classification.code and (classification.code + '_' + classification.name) or classification.name))
+        return res
     _defaults = {
         'date_confirm': date_ref,
         'user_id': lambda cr, uid, id, c={}: id,
@@ -52,7 +65,13 @@ class unit_info(models.Model):
     messages = fields.Char(string='备注', help='备注')
     user_id = fields.Many2one('res.users', string='操作人')
     date_confirm = fields.Date(string='Date', size=64, required=True, help='单据日期')
-    
+
+    @api.multi
+    def name_get(self):
+        res = []
+        for unit_info in self:
+            res.append((unit_info.id, unit_info.code and (unit_info.code + '_' + unit_info.name) or unit_info.name))
+        return res
     _defaults = {
         'date_confirm': date_ref,
         'user_id': lambda cr, uid, id, c={}: id,
@@ -78,6 +97,12 @@ class goods_info(models.Model):
     user_id = fields.Many2one('res.users', string='操作人')
     date_confirm = fields.Date(string='Date', size=64, required=True, help='单据日期')
 
+    @api.multi
+    def name_get(self):
+        res = []
+        for goods in self:
+            res.append((goods.id, goods.code and (goods.code + '_' + goods.name) or goods.name))
+        return res
     _defaults = {
         'date_confirm': date_ref,
         'user_id': lambda cr, uid, id, c={}: id,

@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<openerp>
+    <data>
+
+        <!--代理商-->
+        <record id="view_search_fm_agent" model="ir.ui.view">
+            <field name="name">代理商</field>
+            <field name="model">fm.agent</field>
+            <field name="arch" type="xml">
+                <search string="search">
+                    <field name="code" string="代理编号" filter_domain="[('code','ilike',self)]"/>
+                    <field name="name" string="代理名称" filter_domain="[('name','ilike',self)]"/>
+                    <field name="persons_responsible" string="负责人" filter_domain="[('persons_responsible','ilike',self)]"/>
+                    <field name="tel" string="电话" filter_domain="[('tel','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+        <!--门店列表-->
+        <record id="view_search_fm_agent_line" model="ir.ui.view">
+            <field name="name">门店列表</field>
+            <field name="model">agent.line</field>
+            <field name="arch" type="xml">
+                <search string="search">
+                    <field name="name" string="门店名称" filter_domain="[('name','ilike',self)]"/>
+                    <field name="persons_responsible" string="负责人" filter_domain="[('persons_responsible','ilike',self)]"/>
+                    <field name="tel" string="电话" filter_domain="[('tel','ilike',self)]"/>
+                </search>
+            </field>
+        </record>
+
+    </data>
+</openerp>
